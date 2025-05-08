@@ -1,29 +1,62 @@
-Algoritmo "Aula 01"
+Algoritmo "Material aula 1 "
 // Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : victor santos Rohd
+// Professor   : Antonio Carlos Nicolodi
 // Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)   Sarah gabriela andrade maciel
+// Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 08/05/2025
 Var
-// Seção de Declarações das variáveis 
-nome: caractere
-//caractere,inteiro,real logico
+// Seção de Declarações das variáveis
+//  TIPO PRIMITIVOS
+//  CARACTERES INTERIO, REAL, LOGICO
+nome : CARACTERE
+num1, num2 : inteiro
+certificacaoDaAws : interio
+certificacao_da_aws : interio
+
+// reras  variaveis
+// 1 - nao pode começar
+// 2 - não pode palavra reservada
+// 3 - evite caracteres especiais como emojiou (ç)
+// 4 - não pode acentuação
+// 5 - uso do anderline  pq nao pode espaço
+// 6 - camel case - umaPalavraComposta(camelo)
+//snake case - uma_palavra_composta (cobra)
+// dika - coloquei as variaveis de acordo com as suas funcionalidades
+
+
+
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
-//palavras azuis-dedicadas (comandos)
-//palavras vermelhas-textos
+// Seção de Comandos, procedimento, funções, operadores, etc...
 
-//1-line breack(quebra de linha)
-//escreval-saida
-escreval ( "Ola mundo!")
- escreval ( "Top,sou programador")
-escreval ("100")
+// palavra azuis _dedicadas (comando)
+//palavras vermelho - textos
+// 1 line break (quebra de linha).
+// escreval- saida
+
+//escreval ("Ola mundo!")
+//escreval("Top, sou programadora")
+//escreval(100)
 
 
-//leia-entrada
- leia ( nome)
+// leia - entreda
+// variavel - "gaveta de informatiica"
+// se colocada no escreva , abre a gaveta e vê que
+// foi guardado
+//escreval ("____________________________")
+//leia(nome)
+//escreva("Seja bem vindo (a)")
+//escreval (nome)
+//escreval ("____________________________")
 
-//se colocada no escreva,abre a gaveta e ve o que foi
-//guardado
-escreva("Seja bem vindo (a)!)
+
+
+escreval (" Digite o primeiro numero: " )
+leia(num1)
+escreval (" Digite o segundo numero: " )
+leia(num2)
+escreval(num1 + num2)
+
+
+
+
 Fimalgoritmo
