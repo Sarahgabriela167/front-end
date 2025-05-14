@@ -1,0 +1,36 @@
+Algoritmo "semnome"
+var
+
+//Seçao de variaveis
+nT1,nT2: inteiro
+
+Inicio
+//entrada
+//nomeTime2,golsTime
+//nomeTime2,golsTime2
+escreval("Nome t1:nT1")
+leia(nT1)
+Escreval("Gols do time",nT1)
+leia(nt1)
+escreval("Nome t2:")
+leia(nT2)
+
+
+
+//processo
+ se (gT1 < gt2) entao
+escreval ("Time" ,nT1, " venceu!")
+senao
+se (gT1 < gT2) entao
+ escreval ("Time",nT2, " venceu")
+ senao
+ escreval ("Empate")
+ fimSe
+fimse
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+
+Fimalgoritmo
