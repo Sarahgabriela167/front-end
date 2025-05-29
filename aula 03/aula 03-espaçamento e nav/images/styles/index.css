@@ -1,0 +1,25 @@
+body{
+    background-color:red;
+}
+header,footer{
+    /*heigth:80px ;*/
+    /*padding- espaçamento interno */
+    /*margin - espaçamento externo */
+    /*x: 10px (todos os lados)*/
+    /*x: 10px 10px(eixo y,cima,baixo,/eixo x,esquerda direita)*/
+    /*padding: 20px 10px 5px 15px;
+    padding-top:20px;
+    padding-rigth: 10px;
+    paddim-top:10px;
+    padding-battom: 5px;
+    paddin-left: 15px; */
+    padding : 20px 0px;
+ margin-bottom :20px;
+ text-align: center;
+ background-color: rgb(192, 109, 0)
+}
+main{
+    margin:20px 0px;
+    text-align: center;
+
+}

@@ -1,0 +1,31 @@
+.pai{
+     width: 800px;
+     padding: 400px;
+
+     background-color: coral;
+     /*display-maneira que mostra os elementos */
+     /* block (blocos) um em cima do outro,da  esquerda para direita */
+     /*flex (flexivel) linhas e colunas */
+     display: flex;
+flex-direction: row;
+/*justfy-content -alinhamento do eixo x */
+  justify-content: space-around;
+  align-items: center;
+  /*alig-content - alinhamento do eixo y */
+  align-items: center;
+  /* gap- espaçamento entre elementos */
+  gap: 20px;
+  /*obs : o alinhamento so acontece a largura/altura */
+  /*flex-wrap*/
+  flex-wrap:  wrap;
+} 
+#filho{
+    width: 100px;
+    height: 100px;
+  background-color: red;  
+}
+
+
+#f3{
+    background-color: green;
+}
