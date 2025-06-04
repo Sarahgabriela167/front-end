@@ -1,0 +1,62 @@
+/* Tabela de opções de bolos */
+.table-bolos {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+.table-bolos th, .table-bolos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-bolos th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.table-bolos tr:hover {
+    background-color: #f1f1f1; /* Efeito de hover */
+}
+
+.table-bolos .product-name {
+    font-weight: bold; /* Destacar o nome do produto */
+}
+
+img{
+    width: 300px;
+}
+
+.margin-rosa {
+    margin: 10px;
+    background-color: pink;
+    padding: 10px; /* Adicionando padding para melhor visualização */
+}
+
+ul{
+    display: flex;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;}
+
+.header h1 {
+    font-size: 32px; /* Exemplo de tamanho de fonte */
+    font-size: 24px;
+}
+
+/* Descrição abaixo do título */
+.header p.description {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #555; /* Cor da descrição:animation-range-start: ; */
+}
+
+
+
+
+
+
+
