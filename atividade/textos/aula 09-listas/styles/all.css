@@ -1,0 +1,43 @@
+*{
+    margin:0%;
+    padding: 0%;
+}
+.assunto{
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+    background-color:aliceblue;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: slategray;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color: brown;
+}
+#linksobrehouver{
+    color:green
+}
+#logo img{
+    width: 24px;
+}
+
+
+
+
+
