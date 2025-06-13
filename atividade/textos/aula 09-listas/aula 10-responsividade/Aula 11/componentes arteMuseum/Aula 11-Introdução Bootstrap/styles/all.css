@@ -1,0 +1,17 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.navbar{
+    background-color: light purple;
+}
+
+input{
+    transition: 1s!important;
+}
+input:focus{
+    transition: color 1s; 
+    background-color: ;
+}
+
+

@@ -1,0 +1,16 @@
+*{
+    margin:0%;
+    padding: 0%;
+}
+
+:root{
+    --corPrimaria: #5e93e3;
+    --design: #85bef6;
+        --tamanhoFonte: 14pt;
+        --corRoxa: #800080; 
+    }
+    --PostTamanho: 300px;
+}
+
+
+

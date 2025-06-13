@@ -1,0 +1,14 @@
+header {
+    background-color: red;
+    display: flex; /* Alinha os itens do cabeçalho em linha */
+    justify-content: space-between; /* Espaçamento entre os itens */
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin-right: 15px; /* Espaçamento entre os itens */
+    display: inline; /* Alinha os itens em linha */
+}
