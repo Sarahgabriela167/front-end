@@ -1,0 +1,41 @@
+
+*{
+    margin: 0%;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: bisque;
+}
+a{
+    text-decoration: none;
+}
+ ul{
+    list-style: none;
+ }
+
+ *{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.1rem;
+    color: gray;
+ }
+ 
+.banner-img{
+border-image-repeat: repeat;
+width: 10%;
+padding: auto;
+font-size: 10px;
+background-position: center;
+background-size:contain}
+
+Nav {
+    max-width: 1.120px;
+    margin: auto;
+    padding: 1.5rem 10rem;
+
+}
+
+
