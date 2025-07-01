@@ -1,0 +1,56 @@
+https://github.com/Sarahgabriela167/Revis-o.git
+Add commentMore actions        </section>        <section class="exercicios" id="ex2">            <select id="links">                <option value="#">SELECIONE A OPÇÃO!</option>                <option value="https://www.google.com">Globo</option>                <option value="https://www.terra.com.br/">Terra</option>                <option value="https://www.uol.com.br/">Uol</option>            </select>        </section>        <section class="exercicios" id="ex3"></section>        <section class="exercicios" id="ex4">            <label for="valor">Valor</label>            <input type="number" id="valor">            <label for="perc">Percentual %</label>            <input type="number" id="perc">        <section class="exercicios" id="ex2"></section>        <section class="exercicios" id="ex3"></section>        <section class="exercicios" id="ex4"></section>        </section>        <section class="exercicios" id="ex5"></section>        <section class="exercicios" id="ex6"></section>        <section class="exercicios" id="ex7"></section>
+‎04 - javascript/revisão 1/scripts/script.jsCopy file name to clipboardExpand all lines: 04 - javascript/revisão 1/scripts/script.js+19Lines changed: 19 additions & 0 deletionsOriginal file line numberDiff line numberDiff line change@@ -15,6 +15,25 @@ function ex1() {// Terra e Uol. Quando escolhermos uma opção será acessado // a página da opção escolhida.function ex2(){    let link = document.querySelector("#links").value;    location = link; }document.querySelector("#links").addEventListener('change',ex2);//4) Monte um script conforme o layout apresentado abaixo contendo duas // caixa de texto. Quando sair da caixa de percentual efetuar o // cálculo de uma percentual sobre o valor digitado mostrando em uma caixa // de alerta.// arrow function -> exercicio 4 - percentual do valordocument.querySelector("#perc").addEventListener('focusout', () => {    // Nan - Not a Number    const valor = Number(document.querySelector("#valor").value);    const perc = Number(document.querySelector("#perc").value);    let resultado = valor * (perc / 100);    // toFixed() limita as casas decimais    alert(`O percentual do valor é ${resultado.toFixed(2)}`);});Add comment
+  <section class="exercicios" id="ex2">Add commentMore actions
+            <select id="links">
+                <option value="#">SELECIONE A OPÇÃO!</option>
+                <option value="https://www.google.com">Globo</option>
+                <option value="https://www.terra.com.br/">Terra</option>
+                <option value="https://www.uol.com.br/">Uol</option>
+            </select>
+        </section>
+ <section class="exercicios" id="ex3"></section>
+   <section class="exercicios" id="ex4">Add commentMore actions
+            <label for="valor">Valor</label>
+            <input type="number" id="valor">
+            <label for="perc">Percentual %</label>
+            <input type="number" id="perc">
+      <section class="exercicios" id="ex2"></section>Add commentMore actions        <section class="exercicios" id="ex3"></section>        <section class="exercicios" id="ex4"></section>        </section>        <section class="exercicios" id="ex5"></section>        <section class="exercicios" id="ex6"></section>        <section class="exercicios" id="ex7"></section>
+‎04 - javascript/revisão 1/scripts/script.js
++19
+Lines changed: 19 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -15,6 +15,25 @@ function ex1() {
+// Terra e Uol. Quando escolhermos uma opção será acessado 
+// a página da opção escolhida.
+function ex2(){
+    let link = document.querySelector("#links").value;
+
+    location = link; 
+}
+document.querySelector("#links").addEventListener('change',ex2);
+@@ -15,6 +15,25 @@ function ex1() {
+// Terra e Uol. Quando escolhermos uma opção será acessado 
+// a página da opção escolhida.
+function ex2(){
+    let link = document.querySelector("#links").value;
+
+    location = link; 
+}
+document.querySelector("#links").addEventListener('change',ex2);
+//4) Monte um script conforme o layout apresentado abaixo contendo duas Add commentMore actions
+// caixa de texto. Quando sair da caixa de percentual efetuar o 
+// cálculo de uma percentual sobre o valor digitado mostrando em uma caixa 
+// de alerta.
+
+// arrow function -> exercicio 4 - percentual do valor
+document.querySelector("#perc").addEventListener('focusout', () => {
+    // Nan - Not a Number
+    const valor = Number(document.querySelector("#valor").value);
+    const perc = Number(document.querySelector("#perc").value);
+
+    let resultado = valor * (perc / 100);
+
+    // toFixed() limita as casas decimais
+    alert(`O percentual do valor é ${resultado.toFixed(2)}`);
+});Add comment
