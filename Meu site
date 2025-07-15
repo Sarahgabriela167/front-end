@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devocional da Sarah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+    }
+    footer {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    iframe {
+      margin-bottom: 1em;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Devocional da Sarah</h1>
+    <nav>
+      <a href="#devocional">Devocionais</a>
+      <a href="#oracoes">Orações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="devocional">
+    <h2>Devocionais Diários</h2>
+    <div id="devocional-texto"></div>
+    <div id="devocional-mensagem"></div>
+    <button onclick="anteriorDevocional()">Anterior</button>
+    <button onclick="proximoDevocional()">Próximo</button>
+  </section>
+
+  <section id="oracoes">
+    <h2>Orações em Vídeo</h2>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZOVxMOGSlXI?si=s-yLugIemSQsywr_" allowfullscreen></iframe>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZiUC0FN2S3A?si=Gi7rD734-wVTHhgG" allowfullscreen></iframe>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/ru2bIWwxxg8?si=dSB7SCHt9ULkTFxC" allowfullscreen></iframe>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/GK3ewClL1YI?si=A7SHy5QVzr7c0ANI" allowfullscreen></iframe>
+  </section>
+
+  <footer id="contato">
+    <p>Canal no YouTube:
+      <a href="https://www.youtube.com/@SarahGabriela024" target="_blank" style="color:white; text-decoration:underline;">
+        @SarahGabriela024
+      </a>
+    </p>
+    <p>Email:
+      <a href="mailto:sarahgabrielamaciel76@gmail.com" style="color:white; text-decoration:underline;">
+        sarahgabrielamaciel76@gmail.com
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    const devocionais = [
+      { texto: '\"A mulher sábia edifica a sua casa\" - Provérbios 14:1', mensagem: 'Escolha palavras que constroem e fortalecem.' },
+      { texto: '\"O Senhor é meu pastor, nada me faltará\" - Salmo 23:1', mensagem: 'Deus proverá todas as suas necessidades.' },
+      { texto: '\"Entrega o teu caminho ao Senhor\" - Salmo 37:5', mensagem: 'Confie em Deus e Ele agirá.' },
+      { texto: '\"Em tudo dai graças\" - 1 Tessalonicenses 5:18', mensagem: 'A gratidão transforma o coração.' },
+      { texto: '\"O Senhor pelejará por vós, e vós vos calareis\" - Êxodo 14:14', mensagem: 'Deus luta por você, confie.' },
+      { texto: '\"Clama a mim, e responder-te-ei\" - Jeremias 33:3', mensagem: 'Deus está ouvindo sua oração.' },
+      { texto: '\"Se Deus é por nós, quem será contra nós?\" - Romanos 8:31', mensagem: 'Com Ele, somos mais que vencedoras.' },
+      { texto: '\"O choro pode durar uma noite, mas a alegria vem pela manhã\" - Salmo 30:5', mensagem: 'A sua vitória está chegando.' }
+    ];
+
+    let indiceAtual = 0;
+
+    function atualizarDevocional() {
+      document.getElementById('devocional-texto').innerText = devocionais[indiceAtual].texto;
+      document.getElementById('devocional-mensagem').innerText = devocionais[indiceAtual].mensagem;
+    }
+
+    function proximoDevocional() {
+      if (indiceAtual < devocionais.length - 1) {
+        indiceAtual++;
+        atualizarDevocional();
+      }
+    }
+
+    function anteriorDevocional() {
+      if (indiceAtual > 0) {
+        indiceAtual--;
+        atualizarDevocional();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', atualizarDevocional);
+  </script>
+</body>
+</html>
