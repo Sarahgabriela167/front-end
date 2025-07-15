@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devocional Mulher - Sarah Gabriela Andrade Maciel</title>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Reset e base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f5;
+      color: #4b2e4f;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a {
+      color: #ff69b4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #ff69b4;
+      padding: 15px 20px;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 8px rgba(255, 105, 180, 0.6);
+    }
+    header .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 1.2px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover, nav button.active {
+      background-color: #ff85ac;
+      box-shadow: 0 0 8px rgba(255, 105, 180, 0.7);
+    }
+    .search-container {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+      position: relative;
+    }
+    .search-container input[type="search"] {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      font-size: 0.95rem;
+    }
+    .search-container button {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ff69b4;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .search-container button:hover {
+      background: #ff85ac;
+    }
+
+    /* Topo com foto */
+    .topo-foto {
+      margin: 30px auto 20px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+      border: 4px solid #ff69b4;
+    }
+    .topo-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .nome-titulo {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #d53f70;
+      margin-bottom: 10px;
+    }
+    .descricao-topo {
+      text-align: center;
+      font-style: italic;
+      color: #a63f5c;
+      margin-bottom: 40px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Conteúdo principal */
+    main {
+      flex-grow: 1;
+      max-width: 700px;
+      margin: 0 auto 60px;
+      padding: 0 15px;
+    }
+    section {
+      background: white;
+      padding: 20px 25px;
+      margin-bottom: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    }
+    h2 {
+      color: #d53f70;
+      margin-top: 0;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff69b4;
+      padding-bottom: 8px;
+    }
+
+    /* Devocional */
+    #devocional-dia {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    #devocional-versiculo {
+      color: #d53f70;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    #devocional-mensagem {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #a63f5c;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .botoes-navegacao {
+      display: flex;
+      justify-content: space-between;
+    }
+    .botoes-navegacao button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .botoes-navegacao button:disabled {
+      background-color: #ffb6c1;
+      cursor: not-allowed;
+    }
+    .botoes-navegacao button:hover:not(:disabled) {
+      background-color: #ff85ac;
+    }
+
+    /* Orações */
+    #oracao-texto {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #a63f5c;
+      margin-bottom: 15px;
+      min-height: 80px;
+    }
+    #oracao-video {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 18px 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -3px 8px rgba(255, 105, 180, 0.7);
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 500px) {
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search-container {
+        margin-top: 12px;
+        max-width: 100%;
+      }
+      .botoes-navegacao {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .botoes-navegacao button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Devocional Mulher - Sarah Gabriela</div>
+  <nav>
+    <button class="nav-btn active" data-section="devocionais">Devocionais</button>
+    <button class="nav-btn" data-section="oracoes">Orações</button>
+  </nav>
+  <div class="search-container">
+    <form id="search-form" role="search">
+      <input type="search" name="q" placeholder="Pesquisar devocionais..." aria-label="Pesquisar devocionais" />
+      <button type="submit" aria-label="Buscar">🔍</button>
+    </form>
+  </div>
+</header>
+
+<div class="topo-foto">
+  <img src="image/sarah.jpg" alt="Foto de Sarah Gabriela Andrade Maciel" />
+</div>
+<div class="nome-titulo">Sarah Gabriela Andrade Maciel</div>
+<div class="descricao-topo">Um devocional diário para mulheres que buscam fortalecimento espiritual e inspiração.
+    Uma jovem Brasileira de 21 anos que ama a Deus e deseja compartilhar sua fé com o mundo.</div>
+</div>
+    
+</div>
+
+<main>
+  <!-- Devocionais -->
+  <section id="devocionais" class="content-section">
+    <h2>Devocionais Diários</h2>
+    <div id="devocional-container">
+      <p id="devocional-dia">Dia 1</p>
+      <p id="devocional-versiculo">Filipenses 4:13</p>
+      <p id="devocional-mensagem">Tudo posso naquele que me fortalece.</p>
+      <div class="botoes-navegacao">
+        <button id="btn-prev" disabled>Anterior</button>
+        <button id="btn-next">Próximo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orações -->
+  <section id="oracoes" class="content-section" style="display:none;">
+    <h2>Orações para Segundas, Quartas e Sextas</h2>
+    <p id="oracao-texto">Senhor, guia-me e restaura minha alma, mesmo nos momentos difíceis. Que eu encontre paz e segurança em Ti hoje.</p>
+    <iframe id="oracao-video" src="https://www.youtube.com/embed/ZOVxMOGSlXI?si=s-yLugIemSQsywr_" allowfullscreen title="Oração do canal Sarah Gabriela"></iframe>
+ 
+    <ul style="list-style-type: none; padding: 0;">
+      <li>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZOVxMOGSlXI?si=s-yLugIemSQsywr_" title="Oração 1" frameborder="0" allowfullscreen></iframe>
+      </li>
+      <li>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZiUC0FN2S3A?si=Gi7rD734-wVTHhgG" title="Oração 2" frameborder="0" allowfullscreen></iframe>
+      </li>
+      <li>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/ru2bIWwxxg8?si=dSB7SCHt9ULkTFxC" title="Oração 3" frameborder="0" allowfullscreen></iframe>
+      </li>
+      <li>
+  </section>
+</main>
+
+<footer>
+  🌸 Visite meu canal no YouTube: 
+  <a href="https://www.youtube.com/@SarahGabriela024" target="_blank" rel="noopener noreferrer">@SarahGabriela024</a>
+  </a> |
+  Email: 
+  <a href="mailto:sarahgabrielamaciel76@gmail.com" style="color: white; text-decoration: underline;">
+    sarahgabrielamaciel76@gmail.com
+  </a>
+</footer>
+
+<script>
+  // Navegação das abas
+  const navBtns = document.querySelectorAll('.nav-btn');
+  const sections = document.querySelectorAll('.content-section');
+
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      navBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      sections.forEach(sec => sec.style.display = 'none');
+      document.getElementById(btn.dataset.section).style.display = 'block';
+    });
+  });
+
+  // Devocionais diários (exemplo de 10 dias, pode ampliar)
+  const devocionais = [
+    { dia: 1, versiculo: "Filipenses 4:13", mensagem: "Tudo posso naquele que me fortalece." },
+    { dia: 2, versiculo: "Salmos 46:1", mensagem: "Deus é nosso refúgio e fortaleza, socorro bem presente na angústia." },
+    { dia: 3, versiculo: "Provérbios 3:5", mensagem: "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento." },
+    { dia: 4, versiculo: "Isaías 40:31", mensagem: "Os que esperam no Senhor renovarão as forças, subirão com asas como águias." },
+    { dia: 5, versiculo: "Jeremias 29:11", mensagem: "Eu sei os planos que tenho para vocês, planos de paz e não de mal." },
+    { dia: 6, versiculo: "Romanos 8:28", mensagem: "Todas as coisas cooperam para o bem daqueles que amam a Deus." },
+    { dia: 7, versiculo: "Salmos 23:1", mensagem: "O Senhor é meu pastor; nada me faltará." },
+    { dia: 8, versiculo: "João 14:27", mensagem: "Deixo-vos a paz; a minha paz vos dou; não vo-la dou como o mundo a dá." },
+    { dia: 9, versiculo: "Mateus 11:28", mensagem: "Venham a mim, todos os que estão cansados e sobrecarregados, e eu lhes darei descanso." },
+    { dia: 10, versiculo: "2 Coríntios 12:9", mensagem: "A minha graça te basta, pois o meu poder se aperfeiçoa na fraqueza." }
+  ];
+
+  let indexDevocional = 0;
+
+  const diaElem = document.getElementById('devocional-dia');
+  const versiculoElem = document.getElementById('devocional-versiculo');
+  const mensagemElem = document.getElementById('devocional-mensagem');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+
+  function atualizarDevocional() {
+    const dev = devocionais[indexDevocional];
+    diaElem.textContent = `Dia ${dev.dia}`;
+    versiculoElem.textContent = dev.versiculo;
+    mensagemElem.textContent = dev.mensagem;
+
+    btnPrev.disabled = (indexDevocional === 0);
+    btnNext.disabled = (indexDevocional === devocionais.length - 1);
+  }
+
+  btnPrev.addEventListener('click', () => {
+    if(indexDevocional > 0) {
+      indexDevocional--;
+      atualizarDevocional();
+    }
+  });
+
+  btnNext.addEventListener('click', () => {
+    if(indexDevocional < devocionais.length - 1) {
+      indexDevocional++;
+      atualizarDevocional();
+    }
+  });
+
+  atualizarDevocional();
+
+  // Pesquisa simples por devocionais
+  const searchForm = document.getElementById('search-form');
+  searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const termo = searchForm.q.value.trim().toLowerCase();
+    if (!termo) return;
+
+    const encontrado = devocionais.find(dev => 
+      dev.mensagem.toLowerCase().includes(termo) || 
+      dev.versiculo.toLowerCase().includes(termo));
+
+    if (encontrado) {
+      indexDevocional = devocionais.indexOf(encontrado);
+      atualizarDevocional();
+      alert(`Devocional encontrado: Dia ${encontrado.dia} - ${encontrado.versiculo}`);
+    } else {
+      alert('Nenhum devocional encontrado para esse termo.');
+    }
+  });
+</script>
+</body>
+</html>
+ 
